@@ -2,7 +2,7 @@
 
 **A small online library. Add a book, borrow a book, return a book.**
 
-🔗 **Live Site:** [https://YOUR-LIVE-SITE-URL.vercel.app](https://YOUR-LIVE-SITE-URL.vercel.app)
+🔗 **Live Site:** [https://project-8-client.vercel.app](https://project-8-client.vercel.app)
 
 🖥️ **Server Repository:** [https://github.com/mdjabbarmollah/project-8-server](https://github.com/mdjabbarmollah/project-8-server)
 
@@ -47,30 +47,6 @@ BookNook lets readers share the books on their shelf and borrow the ones they ha
 1. Clone the repository and install dependencies:
 
    ```bash
-   git clone https://github.com/mdjabbarmollah/project-8-client.git
+   git clone [https://github.com/mdjabbarmollah/project-8-client.git](https://github.com/mdjabbarmollah/project-8-client.git)
    cd project-8-client
    npm install
-   ```
-
-2. Create a `.env.local` file in the project root:
-
-   ```env
-   MONGODB_URI=your_mongodb_connection_string
-   BETTER_AUTH_SECRET=your_random_secret
-   BETTER_AUTH_URL=http://localhost:3000
-   GOOGLE_CLIENT_ID=your_google_client_id
-   GOOGLE_CLIENT_SECRET=your_google_client_secret
-   NEXT_PUBLIC_API_URL=http://localhost:8000
-   NEXT_PUBLIC_IMGBB_KEY=your_imgbb_api_key
-   ```
-
-3. Make sure the BookNook server is running on `http://localhost:8000`.
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-   Open [http://localhost:3000](http://localhost:3000).
-
