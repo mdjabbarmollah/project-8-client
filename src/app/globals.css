@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* BookNook brand — lime green used on every button and accent */
+  
   --color-brand: #a8e870;
   --color-brand-dark: #b9f284;
   --color-brand-ink: #0a0e0a;
@@ -55,7 +55,7 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Light theme (screenshots are dark; toggle switches to this) */
+
 :root {
   --background: oklch(0.975 0.004 95);
   --foreground: oklch(0.18 0.02 145);
@@ -91,7 +91,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* Dark theme — the look shown in the design screenshots */
+
 .dark {
   --background: oklch(0.145 0.014 145);
   --foreground: oklch(0.96 0.005 95);
@@ -146,7 +146,7 @@
   }
 }
 
-/* Swiper slider colours */
+
 .swiper {
   --swiper-theme-color: #ffffff;
   --swiper-navigation-color: #ffffff;

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 
-// Any unexpected error on a route lands here instead of a blank page
+
 export default function ErrorPage({
   error,
   reset,

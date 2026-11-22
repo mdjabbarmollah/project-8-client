@@ -47,6 +47,49 @@ BookNook lets readers share the books on their shelf and borrow the ones they ha
 1. Clone the repository and install dependencies:
 
    ```bash
-   git clone [https://github.com/mdjabbarmollah/project-8-client.git](https://github.com/mdjabbarmollah/project-8-client.git)
+   git clone https://github.com/mdjabbarmollah/project-8-client.git
    cd project-8-client
    npm install
+   ```
+
+2. Create a `.env.local` file in the project root (never commit it — `.env*` is already gitignored):
+
+   ```env
+   BETTER_AUTH_SECRET=your_better_auth_secret
+   BETTER_AUTH_URL=http://localhost:3000
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   MONGODB_URI=your_mongodb_connection_string
+   NEXT_PUBLIC_API_URL=http://localhost:8000
+   NEXT_PUBLIC_IMGBB_KEY=your_imgbb_api_key
+   ```
+
+   Local development uses `http://localhost:3000` for the client and `http://localhost:8000` for the API. The live deployment uses [https://project-8-client.vercel.app](https://project-8-client.vercel.app) and [https://project-8-server.vercel.app](https://project-8-server.vercel.app).
+
+   For Google login, add these **Authorized redirect URIs** / **JavaScript origins** in Google Cloud Console:
+
+   - `http://localhost:3000/api/auth/callback/google`
+   - `http://localhost:3000`
+
+3. Start the backend (from the [server repository](https://github.com/mdjabbarmollah/project-8-server)) and this frontend in two terminals:
+
+   ```bash
+   # terminal 1 — server (port 8000)
+   cd ../project-8-server
+   npm install
+   npm start
+
+   # terminal 2 — client (port 3000)
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000).
+
+## Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the dev server (Turbopack) |
+| `npm run build` | Production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | ESLint |

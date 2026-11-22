@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="w-full border-t border-border bg-muted/40 px-5 pt-14 pb-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {/* About */}
+       
           <div>
             <Logo linked={false} />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -16,7 +16,7 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Contact */}
+     
           <div>
             <h3 className="font-heading text-lg font-semibold">Contact</h3>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
@@ -45,7 +45,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Social links */}
+  
           <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="font-heading text-lg font-semibold">Follow us</h3>
             <div className="mt-4 flex items-center gap-3">
@@ -54,7 +54,7 @@ export function Footer() {
                 aria-label="X"
                 className="flex size-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand hover:text-brand"
               >
-                {/* New X logo (not the old Twitter bird) */}
+            
                 <svg viewBox="0 0 24 24" fill="currentColor" className="size-4">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>

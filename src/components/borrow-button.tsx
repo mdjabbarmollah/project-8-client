@@ -17,7 +17,7 @@ type Props = {
   available: boolean;
 };
 
-/** Opens the confirm-borrow modal, then POSTs /borrows on the backend */
+
 export function BorrowButton({
   bookId,
   bookTitle,
@@ -58,7 +58,7 @@ export function BorrowButton({
     }
   };
 
-  // No copies left → disabled button
+
   if (!available) {
     return (
       <button

@@ -17,7 +17,7 @@ const publicLinks = [
   { href: "/books", label: "All Books" },
 ];
 
-// Private links — only shown to logged-in users
+
 const privateLinks = [
   { href: "/add-book", label: "Add Book" },
   { href: "/my-books", label: "My Books" },
@@ -30,13 +30,13 @@ export function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const [menuOpen, setMenuOpen] = useState(false); // profile dropdown
-  const [mobileOpen, setMobileOpen] = useState(false); // mobile nav
+  const [menuOpen, setMenuOpen] = useState(false); 
+  const [mobileOpen, setMobileOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const links = user ? [...publicLinks, ...privateLinks] : publicLinks;
 
-  // Close the profile dropdown when clicking outside
+
   useEffect(() => {
     if (!menuOpen) return;
     const onClick = (event: MouseEvent) => {
@@ -48,7 +48,7 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", onClick);
   }, [menuOpen]);
 
-  // Close menus when the route changes (adjust state during render, per React docs)
+  
   const [lastPath, setLastPath] = useState(pathname);
   if (lastPath !== pathname) {
     setLastPath(pathname);
@@ -69,7 +69,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5">
         <Logo />
 
-        {/* Desktop links */}
+    
         <ul className="hidden items-center gap-7 text-sm md:flex">
           {links.map((link) => {
             const active =
@@ -92,7 +92,7 @@ export function Navbar() {
           })}
         </ul>
 
-        {/* Right side: theme toggle + login buttons or avatar */}
+      
         <div className="flex items-center gap-2 md:gap-3">
           <ThemeToggle />
 
@@ -168,7 +168,7 @@ export function Navbar() {
             </>
           )}
 
-          {/* Mobile menu button */}
+     
           <button
             type="button"
             onClick={() => setMobileOpen((open) => !open)}
@@ -181,7 +181,7 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile links */}
+
       {mobileOpen && (
         <ul className="border-t border-border bg-background px-5 py-3 text-sm md:hidden">
           {links.map((link) => (

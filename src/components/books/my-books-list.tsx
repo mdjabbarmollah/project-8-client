@@ -133,7 +133,7 @@ export function MyBooksList({
         />
       )}
 
-      {/* Custom confirm modal (never the browser confirm) */}
+    
       <AlertDialog
         open={!!deleting}
         onOpenChange={(open) => {

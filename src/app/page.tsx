@@ -17,7 +17,7 @@ import type { Book } from "@/lib/types";
 
 export const metadata: Metadata = { title: "BookNook | Home" };
 
-// Latest 6 books from the database (backend sorts newest first)
+
 async function getLatestBooks(): Promise<Book[]> {
   try {
     const res = await fetch(`${API_URL}/books?limit=6`, { cache: "no-store" });

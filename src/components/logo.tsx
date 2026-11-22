@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-/** Green rounded square with an open-book glyph — used in navbar and footer */
+
 export function LogoMark({ className }: { className?: string }) {
   return (
     <span
@@ -27,7 +27,7 @@ export function LogoMark({ className }: { className?: string }) {
   );
 }
 
-/** Logo mark + "BookNook" wordmark. Stands alone or links home. */
+
 export function Logo({ linked = true }: { linked?: boolean }) {
   const content = (
     <span className="flex items-center gap-2.5">

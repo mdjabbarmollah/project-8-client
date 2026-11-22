@@ -9,7 +9,7 @@ import type { IBook } from "@/lib/types";
 export const metadata: Metadata = { title: "BookNook | My Books" };
 
 export default async function MyBooksPage() {
-  // Private route — session comes from the cookie, so a reload stays logged in
+  
   const user = await requireUser("/my-books");
 
   let books: IBook[] = [];

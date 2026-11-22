@@ -20,7 +20,7 @@ const GOOGLE_ICON = (
   </svg>
 );
 
-// Password rules: uppercase, lowercase, at least 6 characters
+
 function checkPassword(password: string) {
   if (!/[A-Z]/.test(password))
     return "Password needs at least one uppercase letter (A-Z).";
@@ -43,7 +43,7 @@ export function SignupForm() {
 
     const problem = checkPassword(password);
     setPasswordError(problem);
-    if (problem) return; // invalid password → no registration
+    if (problem) return;
 
     setLoading(true);
     const { error } = await authClient.signUp.email({
@@ -63,7 +63,7 @@ export function SignupForm() {
     router.push("/login");
   };
 
-  // Google sign-up / sign-in → lands on the home page
+
   const handleGoogleSignUp = async () => {
     const { error } = await authClient.signIn.social({
       provider: "google",

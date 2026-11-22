@@ -7,7 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// Each slide: title, short text and a "Browse Books" button → /books
+
 const slides = [
   {
     image: "/images/banner-1.jpg",

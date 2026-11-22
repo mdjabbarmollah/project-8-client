@@ -27,7 +27,7 @@ export default async function BookDetailsPage({
 }) {
   const { id } = await params;
 
-  // Private route: logged-out visitors are sent to Login and come back here
+  
   const user = await requireUser(`/books/${id}`);
 
   const book = await getBook(id);
@@ -60,7 +60,7 @@ export default async function BookDetailsPage({
             {book.description}
           </p>
 
-          {/* Who added it + copies left */}
+         
           <div className="mt-7 grid gap-6 rounded-lg border border-border bg-card px-6 py-5 text-sm sm:grid-cols-2">
             <div>
               <p className="text-xs text-muted-foreground">Added by</p>

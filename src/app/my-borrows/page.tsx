@@ -10,7 +10,7 @@ import { headers } from "next/headers";
 
 export const metadata: Metadata = { title: "BookNook | My Borrows" };
 
-// Server-side call to GET /borrows — needs the JWT of the logged-in user
+
 async function getBorrows(): Promise<Borrow[] | null> {
   try {
     const tokenResult = await auth.api.getToken({ headers: await headers() });

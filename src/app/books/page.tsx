@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = { title: "BookNook | All Books" };
 
-// No category → every book; with a category → only that shelf
+
 async function getBooks(category: string): Promise<Book[] | null> {
   const query = category ? `?category=${encodeURIComponent(category)}` : "";
   try {

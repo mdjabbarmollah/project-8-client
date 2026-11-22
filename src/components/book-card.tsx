@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Book } from "@/lib/types";
 
-/** One book card: cover, category, title, author and a View Details button */
+
 export function BookCard({ book }: { book: Book }) {
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-brand/60">

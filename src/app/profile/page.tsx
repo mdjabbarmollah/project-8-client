@@ -12,7 +12,7 @@ export const metadata: Metadata = { title: "BookNook | My Profile" };
 export default async function ProfilePage() {
   const user = await requireUser("/profile");
 
-  // Two small stats so the page is not just a name and an email
+  
   let bookCount = 0;
   let borrowCount = 0;
   try {
@@ -23,7 +23,7 @@ export default async function ProfilePage() {
     if (booksRes.ok) bookCount = ((await booksRes.json()) as Book[]).length;
     if (borrowsRes.ok) borrowCount = ((await borrowsRes.json()) as Borrow[]).length;
   } catch {
-    // stats are optional — page still renders without them
+   
   }
 
   const stats = [

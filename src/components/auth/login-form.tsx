@@ -20,7 +20,7 @@ const GOOGLE_ICON = (
   </svg>
 );
 
-// After login, come back to ?callbackURL= or ?redirect= (only our own paths)
+
 function getReturnPath() {
   if (typeof window === "undefined") return "/";
   const params = new URLSearchParams(window.location.search);
@@ -53,7 +53,7 @@ export function LoginForm() {
     router.refresh();
   };
 
-  // Google sign-in: goes to Google, then returns to this site
+  
   const handleGoogleLogin = async () => {
     const { error } = await authClient.signIn.social({
       provider: "google",

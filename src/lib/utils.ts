@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-/** The one button style used across the whole site (lime green, dark text) */
+
 export const brandButton =
   "bg-brand text-brand-ink hover:bg-brand-dark font-semibold rounded-md transition-colors";
 

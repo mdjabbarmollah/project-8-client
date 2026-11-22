@@ -28,6 +28,6 @@ export interface Borrow {
   returnDate: string;
 }
 
-// আগের কোডে এই নামগুলো ব্যবহার হয়েছে, তাই একই জিনিসের দুটো নাম রাখা হলো
+
 export type IBook = Book;
 export type IBorrow = Borrow;

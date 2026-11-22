@@ -24,7 +24,7 @@ export function MyBorrowsTable({
   const [borrows, setBorrows] = useState(initialBorrows);
   const [returningId, setReturningId] = useState<string | null>(null);
 
-  // Return Book: removes the row, backend increases the copy count by 1
+
   const handleReturn = async (borrow: IBorrow) => {
     setReturningId(borrow._id);
     try {

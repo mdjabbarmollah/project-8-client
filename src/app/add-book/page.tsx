@@ -7,7 +7,7 @@ import { requireUser } from "@/lib/session";
 export const metadata: Metadata = { title: "BookNook | Add Book" };
 
 export default async function AddBookPage() {
-  // Private route: logged-out visitors go to Login and return here after login
+  
   await requireUser("/add-book");
 
   return (

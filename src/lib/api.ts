@@ -1,4 +1,3 @@
-// Backend (Express) এর ঠিকানা। .env.local এর NEXT_PUBLIC_API_URL থেকে আসে।
 export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 type RequestOptions = {
@@ -6,13 +5,11 @@ type RequestOptions = {
   body?: unknown;
 };
 
-// Backend-এ request পাঠানোর সহজ helper (Client Component থেকে ব্যবহার হয়)।
-// লগইন থাকলে token নিজে থেকে যোগ হয়। Error হলে Backend-এর message দিয়ে Error ছোড়ে।
 export async function apiRequest<T = unknown>(
   path: string,
   options: RequestOptions = {},
 ): Promise<T> {
-  // client-token শুধু browser-এ দরকার, তাই এখানে আলাদা করে আনা হচ্ছে
+  
   const { getClientToken } = await import("./client-token");
   const token = await getClientToken();
 
