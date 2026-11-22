@@ -3,20 +3,19 @@ import Link from "next/link";
 
 import { MyBorrowsTable } from "@/components/borrows/my-borrows-table";
 import { API_URL } from "@/lib/api";
-import { auth } from "@/lib/auth";
+import { getTokenFromServer } from "@/lib/getTokenFromServer";
 import { requireUser } from "@/lib/session";
 import type { Borrow } from "@/lib/types";
-import { headers } from "next/headers";
 
 export const metadata: Metadata = { title: "BookNook | My Borrows" };
 
 
 async function getBorrows(): Promise<Borrow[] | null> {
   try {
-    const tokenResult = await auth.api.getToken({ headers: await headers() });
+    const token = await getTokenFromServer();
     const res = await fetch(`${API_URL}/borrows`, {
       cache: "no-store",
-      headers: { Authorization: `Bearer ${tokenResult?.token}` },
+      headers: { Authorization: `Bearer ${token ?? ""}` },
     });
     if (!res.ok) return null;
     return await res.json();
