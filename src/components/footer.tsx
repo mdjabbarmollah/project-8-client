@@ -23,19 +23,19 @@ export function Footer() {
               <li className="flex items-center gap-2.5">
                 <Mail className="size-4 shrink-0 text-brand" />
                 <a
-                  href="mailto:hello@booknook.app"
+                  href="mailto:mdjabbarmollah718@gmail.com"
                   className="transition-colors hover:text-foreground"
                 >
-                  hello@booknook.app
+                  mdjabbarmollah718@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="size-4 shrink-0 text-brand" />
                 <a
-                  href="tel:+8801700000000"
+                  href="tel:+8801637198172"
                   className="transition-colors hover:text-foreground"
                 >
-                  +880 1700 000 000
+                  +8801637198172
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
@@ -50,7 +50,9 @@ export function Footer() {
             <h3 className="font-heading text-lg font-semibold">Follow us</h3>
             <div className="mt-4 flex items-center gap-3">
               <a
-                href="https://x.com"
+                href="https://x.com/mdjabbarmollah"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="X"
                 className="flex size-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand hover:text-brand"
               >
@@ -60,7 +62,9 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/tom.hanter.77"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex size-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand hover:text-brand"
               >
@@ -70,6 +74,8 @@ export function Footer() {
               </a>
               <a
                 href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="flex size-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand hover:text-brand"
               >

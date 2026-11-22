@@ -8,7 +8,7 @@ export function AppToaster() {
   return (
     <Toaster
       richColors
-      position="top-center"
+      position="top-right"
       theme={resolvedTheme === 'dark' ? 'dark' : 'light'}
     />
   );
